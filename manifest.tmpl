@@ -1,0 +1,19 @@
+image: toolhippie/calens:latest
+manifests:
+  -
+    image: toolhippie/calens:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  -
+    image: toolhippie/calens:arm64v8
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
+  -
+    image: toolhippie/calens:arm32v6
+    platform:
+      architecture: arm
+      os: linux
+      variant: v6
