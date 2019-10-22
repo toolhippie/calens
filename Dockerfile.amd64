@@ -1,4 +1,4 @@
-FROM webhippie/golang:latest AS build
+FROM webhippie/golang:latest-amd64 AS build
 
 ENV CALENS_PATH github.com/restic/calens
 ENV CALENS_REPO https://${CALENS_PATH}.git
@@ -8,7 +8,7 @@ RUN git clone -b ${CALENS_BRANCH} ${CALENS_REPO} /srv/app/src/${CALENS_PATH} && 
   cd /srv/app/src/${CALENS_PATH} && \
   GO111MODULE=on go install
 
-FROM webhippie/alpine:latest
+FROM webhippie/alpine:latest-amd64
 
 LABEL maintainer="Thomas Boerger <thomas@webhippie.de>" \
   org.label-schema.name="Calens" \
