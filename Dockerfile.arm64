@@ -19,6 +19,7 @@ ENTRYPOINT ["/usr/bin/calens"]
 
 RUN apk update && \
   apk upgrade && \
+  apk add make && \
   rm -rf /var/cache/apk/*
 
 COPY --from=build /srv/app/bin/calens /usr/bin/
