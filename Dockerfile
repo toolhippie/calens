@@ -8,8 +8,7 @@ RUN git clone -b ${CALENS_VERSION} https://github.com/restic/calens.git /srv/app
   GO111MODULE=on go install
 
 FROM webhippie/alpine:latest
-
-ENTRYPOINT ["/usr/bin/calens"]
+ENTRYPOINT [""]
 
 RUN apk update && \
   apk upgrade && \
