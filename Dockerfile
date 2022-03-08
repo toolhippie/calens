@@ -1,4 +1,4 @@
-FROM webhippie/golang:1.16 AS build
+FROM webhippie/golang:1.17 AS build
 
 # renovate: datasource=github-tags depName=restic/calens
 ENV CALENS_VERSION=v0.2.0
