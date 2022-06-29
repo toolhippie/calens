@@ -3,10 +3,12 @@
     "extends": [
         "github>webhippie/renovate:docker"
     ],
-    "packageRules": [{
-        "groupName": "calens packages",
-        "matchDatasources": [
-            "github-tags"
-        ]
-    }]
+    "packageRules": [
+        {
+            "groupName": "calens packages",
+            "matchDatasources": [
+                "github-tags"
+            ]
+        }
+    ]
 }
