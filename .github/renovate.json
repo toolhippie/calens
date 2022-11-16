@@ -9,6 +9,14 @@
             "matchDatasources": [
                 "github-tags"
             ]
+        },
+        {
+            "description": "Strip v prefix from versions",
+            "groupName": "version prefix",
+            "matchDatasources": [
+                "github-tags"
+            ],
+            "extractVersion": "^v(?<version>.*)$"
         }
     ]
 }

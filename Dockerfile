@@ -1,9 +1,9 @@
 FROM webhippie/golang:1.18 AS build
 
 # renovate: datasource=github-tags depName=restic/calens
-ENV CALENS_VERSION=v0.2.0
+ENV CALENS_VERSION=0.2.0
 
-RUN git clone -b ${CALENS_VERSION} https://github.com/restic/calens.git /srv/app/src && \
+RUN git clone -b v${CALENS_VERSION} https://github.com/restic/calens.git /srv/app/src && \
   cd /srv/app/src && \
   GO111MODULE=on go install
 
