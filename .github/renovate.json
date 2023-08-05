@@ -5,21 +5,15 @@
     ],
     "packageRules": [
         {
-            "groupName": "calens packages",
-            "matchDatasources": [
-                "github-tags"
-            ]
-        },
-        {
             "description": "Strip v prefix from versions",
             "groupName": "version prefix",
             "matchDatasources": [
                 "github-tags"
             ],
+            "matchPackageNames": [
+                "restic/calens"
+            ],
             "extractVersion": "^v(?<version>.*)$"
         }
-    ],
-    "ignoreDeps": [
-        "docker/build-push-action"
     ]
 }
