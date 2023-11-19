@@ -1,7 +1,7 @@
 FROM ghcr.io/dockhippie/golang:1.21 AS build
 
 # renovate: datasource=github-tags depName=restic/calens
-ENV CALENS_VERSION=0.3.0
+ENV CALENS_VERSION=0.4.0
 
 RUN git clone -b v${CALENS_VERSION} https://github.com/restic/calens.git /srv/app/src && \
   cd /srv/app/src && \
