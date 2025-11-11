@@ -27,7 +27,7 @@ jobs:
 
       - name: Detect version
         run: |
-          VER=$(sed -ne "s/^.*CALENS_VERSION=\(.*\)/\1/p;" Dockerfile)
+          VER=$(sed -ne "s/^.*CALENS_VERSION=v\(.*\)/\1/p;" Dockerfile)
           echo IMAGE_TAG=${VER} >> ${GITHUB_ENV}
           echo "Building ${VER}"
 

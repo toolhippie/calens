@@ -2,18 +2,5 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
         "github>toolhippie/.github//renovate/preset"
-    ],
-    "packageRules": [
-        {
-            "description": "Strip v prefix from versions",
-            "groupName": "version prefix",
-            "matchDatasources": [
-                "github-tags"
-            ],
-            "matchPackageNames": [
-                "restic/calens"
-            ],
-            "extractVersion": "^v(?<version>.*)$"
-        }
     ]
 }
