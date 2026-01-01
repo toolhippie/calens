@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/golang:1.25@sha256:b3021effd09e56deb82e6e3a79e027cebb78c9cee8f369536b8f66bbd11776dd AS build
+FROM ghcr.io/dockhippie/golang:1.25@sha256:77c2c44ee1faa7d3b2602d572a83f2fb8283feadfeb36e91657d6f9f334aefef AS build
 
 # renovate: datasource=github-tags depName=restic/calens
 ENV CALENS_VERSION=v0.4.0
@@ -7,7 +7,7 @@ RUN git clone -b ${CALENS_VERSION} https://github.com/restic/calens.git /srv/app
   cd /srv/app/src && \
   GO111MODULE=on go install
 
-FROM ghcr.io/dockhippie/alpine:3.23@sha256:f857559a03da3017be1663750116349e56d315cf0f86e64f508aa0613a9ef313
+FROM ghcr.io/dockhippie/alpine:3.23@sha256:5e39b361571bce625f139dea01d8adec6219f266e3517886e48c0134948d6df8
 ENTRYPOINT [""]
 
 RUN apk update && \
