@@ -1,4 +1,4 @@
-FROM ghcr.io/dockhippie/golang:1.25@sha256:77c2c44ee1faa7d3b2602d572a83f2fb8283feadfeb36e91657d6f9f334aefef AS build
+FROM ghcr.io/dockhippie/golang:1.25@sha256:dba9eda64b11aa7b5981a1fc101bb1884691137e6f790bd395390e5b40b5abcc AS build
 
 # renovate: datasource=github-tags depName=restic/calens
 ENV CALENS_VERSION=v0.4.0
