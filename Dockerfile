@@ -7,7 +7,7 @@ RUN git clone -b ${CALENS_VERSION} https://github.com/restic/calens.git /srv/app
   cd /srv/app/src && \
   GO111MODULE=on go install
 
-FROM ghcr.io/dockhippie/alpine:3.23@sha256:3bf7f59a8892a380680d78bca46222cf369b5666a04e682c6a9622b32391fd8d
+FROM ghcr.io/dockhippie/alpine:3.23@sha256:629cd5472f21a622e37a9afabdbd39f489dd22a7fe1e4ced6a0db63589e85dfa
 ENTRYPOINT [""]
 
 RUN apk update && \
